@@ -1,0 +1,17 @@
+{
+  "name": "multi-process-cluster",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "loadtest": "autocannon -c 500 --workers 8 -d 30 --warmup [ -c 1 -d 3 ] --renderStatusCodes localhost:8000"
+  },
+  "keywords": [],
+  "author": "Manoel Campos da Silva Filho <manoelcampos@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "autocannon": "^7.10.0"
+  }
+}
