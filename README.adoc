@@ -1,2 +1,5 @@
 = Exemplo de uso do Node.js cluster
 
+- https://nodejs.org/api/cluster.html
+- https://blog.logrocket.com/optimizing-node-js-app-performance-clustering/
+- https://www.npmjs.com/package/autocannon
