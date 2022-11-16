@@ -1,0 +1,32 @@
+= Projeto usando o Node Cluster
+
+Esta versão do projeto usa o https://nodejs.org/api/cluster.html[Node Cluster]
+para criar várias instâncias do seu servidor node e assim garantir que múltiplos cores
+da CPU possam ser usados para processar requisições em paralelo.
+Com isto, aumenta-se o desempenho da aplicação, permitindo o aumento do throughput:
+número de requisições atendidas por segundo.
+
+== Instalar e iniciar o servidor
+
+[source,bash]
+----
+npm i
+npm start
+----
+
+== Executar Teste de Carga
+
+Para podermos verificar o desempenho da aplicação para 
+o atendimento de requisições concorrentes,
+como foi instalada a dependência https://www.npmjs.com/package/autocannon[autocannon],
+basta digitar o comando abaixo para executar um teste de carga.
+As configurações de tal teste estão no link:package.json[package.json]. 
+Consulte a página de documentação da ferramenta para mais detalhes sobre os parâmetros
+utilizados lá.
+
+[source,bash]
+----
+npm run loadtest
+----
+
+Agora, é só confirmar como os resultados deste projeto são bem melhores do que o anterior.

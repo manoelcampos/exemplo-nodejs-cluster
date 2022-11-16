@@ -1,0 +1,27 @@
+= Projeto que não usa Node Cluster
+
+O projeto executa e usa uma única CPU (independentemente de quantas tenham na máquina),
+limitando a quantidade de requisições atendidas em paralelo.
+
+== Instalar e iniciar o servidor
+
+[source,bash]
+----
+npm i
+npm start
+----
+
+== Executar Teste de Carga
+
+Para podermos verificar o desempenho da aplicação para 
+o atendimento de requisições concorrentes,
+como foi instalada a dependência https://www.npmjs.com/package/autocannon[autocannon],
+basta digitar o comando abaixo para executar um teste de carga.
+As configurações de tal teste estão no link:package.json[package.json]. 
+Consulte a página de documentação da ferramenta para mais detalhes sobre os parâmetros
+utilizados lá.
+
+[source,bash]
+----
+npm run loadtest
+----
